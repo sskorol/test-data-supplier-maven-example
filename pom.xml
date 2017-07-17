@@ -13,7 +13,7 @@
 		<compiler.plugin.version>3.6.0</compiler.plugin.version>
 		<java.version>1.8</java.version>
 		<surefire.plugin.version>2.20</surefire.plugin.version>
-		<allure.version>2.0-BETA11</allure.version>
+		<allure.version>2.0-BETA15</allure.version>
 		<aspectj.version>1.8.10</aspectj.version>
 		<allure.results>${project.build.directory}/allure-results</allure.results>
 	</properties>
@@ -43,7 +43,7 @@
 		<dependency>
 			<groupId>io.github.sskorol</groupId>
 			<artifactId>test-data-supplier</artifactId>
-			<version>0.7.0</version>
+			<version>1.0.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
@@ -53,7 +53,7 @@
 		<dependency>
 			<groupId>org.assertj</groupId>
 			<artifactId>assertj-core</artifactId>
-			<version>3.6.2</version>
+			<version>3.8.0</version>
 		</dependency>
 	</dependencies>
 
@@ -66,6 +66,9 @@
 				<configuration>
 					<source>${java.version}</source>
 					<target>${java.version}</target>
+					<compilerArgs>
+						<arg>-parameters</arg>
+					</compilerArgs>
 				</configuration>
 			</plugin>
 			<plugin>
