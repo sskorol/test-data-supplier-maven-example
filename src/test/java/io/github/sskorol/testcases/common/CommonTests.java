@@ -1,6 +1,6 @@
 package io.github.sskorol.testcases.common;
 
-import io.github.sskorol.dataprovider.DataSupplier;
+import io.github.sskorol.core.DataSupplier;
 import io.github.sskorol.model.User;
 import io.github.sskorol.pages.LoginPage;
 import io.qameta.allure.*;
@@ -38,7 +38,7 @@ public class CommonTests {
         return asList("badUsername1", "badUsername2");
     }
 
-    @DataSupplier(extractValues = true)
+    @DataSupplier(transpose = true)
     public String[] getArrayData(final Method method) {
         return Stream.of(method.getName(), "badPassword1", "badPassword2").toArray(String[]::new);
     }
