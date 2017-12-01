@@ -33,7 +33,7 @@ public class CommonTests {
                      .sorted(comparing(User::getUsername));
     }
 
-    @DataSupplier
+    @DataSupplier(name = "collectionData")
     public List<String> getCollectionData() {
         return asList("badUsername1", "badUsername2");
     }
@@ -84,7 +84,7 @@ public class CommonTests {
     @Feature("Authorization")
     @Story("ALR-24")
     @Severity(SeverityLevel.NORMAL)
-    @Test(dataProvider = "getCollectionData")
+    @Test(dataProvider = "collectionData")
     public void shouldFailOnSubStep(final String username) {
         open(LoginPage.class)
                 .typeUsername(username)

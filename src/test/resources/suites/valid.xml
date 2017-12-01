@@ -3,6 +3,7 @@
 	<test name="Allure tests">
 		<classes>
 			<class name="io.github.sskorol.testcases.common.CommonTests"/>
+			<class name="io.github.sskorol.testcases.common.FactoryTests"/>
 		</classes>
 	</test>
 </suite>
