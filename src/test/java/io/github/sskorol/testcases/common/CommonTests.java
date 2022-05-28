@@ -45,12 +45,12 @@ public class CommonTests {
 
     @BeforeMethod
     public void prepareEnvironment(final Method method) {
-        retrieveData(method);
+        retrieveData(method.getName());
     }
 
     @AfterMethod
     public void cleanUpEnvironment(final Method method) {
-        cleanUpData(method);
+        cleanUpData(method.getName());
     }
 
     @Issue("21")
@@ -117,13 +117,13 @@ public class CommonTests {
                 .displayBalance();
     }
 
-    @Step("Retrieve DB data for {method.name}.")
-    private void retrieveData(final Method method) {
+    @Step("Retrieve DB data for {method}.")
+    private void retrieveData(final String method) {
         // not implemented
     }
 
-    @Step("Cleanup DB data for {method.name}.")
-    private void cleanUpData(final Method method) {
+    @Step("Cleanup DB data for {method}.")
+    private void cleanUpData(final String method) {
         // not implemented
     }
 }
