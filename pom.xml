@@ -10,11 +10,11 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<compiler.plugin.version>3.10.1</compiler.plugin.version>
+		<compiler.plugin.version>3.11.0</compiler.plugin.version>
 		<java.version>17</java.version>
-		<surefire.plugin.version>3.0.0-M6</surefire.plugin.version>
-		<allure.version>2.18.1</allure.version>
-		<aspectj.version>1.9.9.1</aspectj.version>
+		<surefire.plugin.version>3.0.0-M9</surefire.plugin.version>
+		<allure.version>2.21.0</allure.version>
+		<aspectj.version>1.9.19</aspectj.version>
 		<allure.results>${project.build.directory}/allure-results</allure.results>
 	</properties>
 
@@ -22,7 +22,7 @@
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
-			<version>7.6.0</version>
+			<version>7.7.1</version>
 			<exclusions>
 				<exclusion>
 					<groupId>junit</groupId>
@@ -48,17 +48,17 @@
 		<dependency>
 			<groupId>io.github.sskorol</groupId>
 			<artifactId>test-data-supplier</artifactId>
-			<version>2.1.0</version>
+			<version>2.2.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-simple</artifactId>
-			<version>2.0.0-alpha7</version>
+			<version>2.0.6</version>
 		</dependency>
 		<dependency>
 			<groupId>org.assertj</groupId>
 			<artifactId>assertj-core</artifactId>
-			<version>3.22.0</version>
+			<version>3.24.2</version>
 		</dependency>
 	</dependencies>
 
@@ -123,13 +123,13 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-dependency-plugin</artifactId>
-				<version>3.3.0</version>
+				<version>3.5.0</version>
 			</plugin>
 
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-resources-plugin</artifactId>
-				<version>3.2.0</version>
+				<version>3.3.0</version>
 				<executions>
 					<execution>
 						<id>copy-config</id>
@@ -168,9 +168,9 @@
 			<plugin>
 				<groupId>io.qameta.allure</groupId>
 				<artifactId>allure-maven</artifactId>
-				<version>2.11.2</version>
+				<version>2.12.0</version>
 				<configuration>
-					<reportVersion>2.18.1</reportVersion>
+					<reportVersion>2.21.0</reportVersion>
 				</configuration>
 			</plugin>
 		</plugins>
